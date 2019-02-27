@@ -1,0 +1,113 @@
+<!--  
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">Coucou !</h4>
+            <p class="text-muted">Et oui, depuis le début j'étais caché. Merci de m'avoir libéré</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+             <% if cookies[:saved_subscriber] %>
+  <center>
+        <h1>Thanks for sign up!!!</h1>
+  </center>
+  <% else %>
+  <center>
+        <h1>Sign up for my newsletter here!!!</h1>
+  </center>
+      <%= form_for @subscriber, remote: true, html: {class:"form-inline justify-content-center" } do |f| %>
+        <%= f.text_field :name, placeholder: "name", class:"form-control mb-2 mr-sm-2" %>
+        <%= f.email_field :email, placeholder: "email", class:"form-control mb-2 mr-sm-2" %>
+        <div  class="btn btn-info mb-2 mr-sm-2">
+        <%= f.select :langage, ["Ruby","Html","Css","Javascript","bootstrap","GitHub"],prompt: "langage de programmation", class:"mb-2 mr-sm-2" %>
+        </div>
+        <div  class="btn btn-info mb-2 mr-sm-2">
+          <%= f.country_select :pays,class:"mb-2 mr-sm-2" %>
+        </div>
+          <%= f.submit "Sign up here!!", class:"btn btn-info mb-2 mr-sm-2"%>
+      <% end %>
+  <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          <strong>JS & Events</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header> -->
+
+
+<main role="main">
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <%= image_tag("css3.png", alt: "Card image cap", class: "card-img-top") %>
+              <div class="card-body">
+                <p class="card-text">Les feuilles de style en cascade, généralement appelées CSS de l'anglais Cascading Style Sheets, forment un langage informatique qui décrit la présentation des documents HTML.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <%= image_tag("html-5.png", alt: "Card image cap", class: "card-img-top") %>
+              <div class="card-body">
+                <p class="card-text">L’HyperText Markup Language, généralement abrégé HTML, est le langage de balisage conçu pour représenter les pages web.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <%= image_tag("javascript.png", alt: "Card image cap", class: "card-img-top") %>
+              <div class="card-body">
+                <p class="card-text">JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives mais aussi pour les serveurs. C'est un langage orienté objet à prototype.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <%= image_tag("bootstrap.png", alt: "Card image cap", class: "card-img-top") %>
+              <div class="card-body">
+                <p class="card-text">Bootstrap est une boîte à outils open source pour le développement avec HTML, CSS et JS. Protégez rapidement vos idées ou construisez votre application entière avec nos variables Sass et mixins, notre système de grille réactif, de nombreux composants prédéfinis et de puissants plug-ins basés sur jQuery.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <%= image_tag("ruby-programming-language.png", alt: "Card image cap", class: "card-img-top") %>
+              <div class="card-body">
+                <p class="card-text">Un langage de programmation dynamique et open source, axé sur la simplicité et la productivité. Il a une syntaxe élégante, naturelle à lire et facile à écrire.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <%= image_tag("github.png", alt: "Card image cap", class: "card-img-top") %>
+              <div class="card-body">
+                <p class="card-text">GitHub est un service d'hébergement Web permettant de contrôler les versions à l'aide de Git. Il est principalement utilisé pour le code informatique. Il offre toutes les fonctionnalités de contrôle de version distribuées et de gestion de code source de Git, ainsi que l’ajout de ses propres fonctionnalités.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
