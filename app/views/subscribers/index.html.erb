@@ -25,9 +25,9 @@
               <%= form_for @subscriber, remote: true, html: {class:"form-inline justify-content-center" } do |f| %>
                 <%= f.text_field :name, placeholder: "name", class:"form-control mb-2 mr-sm-2" %>
                 <%= f.email_field :email, placeholder: "email", class:"form-control mb-2 mr-sm-2" %>
-                <%= f.select :langage, ["Ruby","Html","Css","Javascript","bootstrap","GitHub"],prompt: "langage de programmation", class:"mb-2 mr-sm-2" %>
-                  <%= f.country_select :pays,class:"mb-2 mr-sm-2" %>
-                  <%= f.submit "SUBMIT", class:"btn btn-info mb-2 mr-sm-2" %>
+                <%= f.select :langage, ["Ruby","Html","Css","Javascript","bootstrap","GitHub"],prompt: "langage de programmation", class:"mb-2 mr-sm-2" %><br><br><br>
+                  <%= f.country_select :pays,class:"mb-2 mr-sm-2" %><br><br><br><br>
+                  <%= f.submit "SUBMIT", class:"btn btn-warning mb-2 mr-sm-2" %>
               <% end %>
           <% end %>
           </div>
@@ -54,6 +54,14 @@
     <div class="album py-5 bg-light">
       <div class="container">
         <div class="row">
+
+          <div class="col-md-12">
+            <div class="card mb-4 box-shadow">
+              <center>
+                <h1>VOUS VOULEZ APPRENDRE SES LANGAGE SUR MA PAGE. N'HESITE PAS A S'INSCRIRE</h1>
+              </center>
+            </div>
+          </div>
 
           <div class="col-md-4">
             <div class="card mb-4 box-shadow">
