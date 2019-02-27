@@ -1,4 +1,10 @@
-<!--  
+<script>
+  $(document).ready(function(){
+      $("span.navbar-toggler-icon").click(function(){
+          $("#navbarHeader").toggle();
+      });
+  });
+</script>
 <header>
     <div class="collapse bg-dark" id="navbarHeader">
       <div class="container">
@@ -8,26 +14,22 @@
             <p class="text-muted">Et oui, depuis le début j'étais caché. Merci de m'avoir libéré</p>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
-             <% if cookies[:saved_subscriber] %>
-  <center>
-        <h1>Thanks for sign up!!!</h1>
-  </center>
-  <% else %>
-  <center>
-        <h1>Sign up for my newsletter here!!!</h1>
-  </center>
-      <%= form_for @subscriber, remote: true, html: {class:"form-inline justify-content-center" } do |f| %>
-        <%= f.text_field :name, placeholder: "name", class:"form-control mb-2 mr-sm-2" %>
-        <%= f.email_field :email, placeholder: "email", class:"form-control mb-2 mr-sm-2" %>
-        <div  class="btn btn-info mb-2 mr-sm-2">
-        <%= f.select :langage, ["Ruby","Html","Css","Javascript","bootstrap","GitHub"],prompt: "langage de programmation", class:"mb-2 mr-sm-2" %>
-        </div>
-        <div  class="btn btn-info mb-2 mr-sm-2">
-          <%= f.country_select :pays,class:"mb-2 mr-sm-2" %>
-        </div>
-          <%= f.submit "Sign up here!!", class:"btn btn-info mb-2 mr-sm-2"%>
-      <% end %>
-  <% end %>
+          <% if cookies[:saved_subscriber] %>
+          <center>
+                <h1 class="text-white">Thanks for sign up!!!</h1>
+          </center>
+          <% else %>
+          <center>
+                <h1 class="text-white">Sign up for my newsletter here!!!</h1>
+          </center>
+              <%= form_for @subscriber, remote: true, html: {class:"form-inline justify-content-center" } do |f| %>
+                <%= f.text_field :name, placeholder: "name", class:"form-control mb-2 mr-sm-2" %>
+                <%= f.email_field :email, placeholder: "email", class:"form-control mb-2 mr-sm-2" %>
+                <%= f.select :langage, ["Ruby","Html","Css","Javascript","bootstrap","GitHub"],prompt: "langage de programmation", class:"mb-2 mr-sm-2" %>
+                  <%= f.country_select :pays,class:"mb-2 mr-sm-2" %>
+                  <%= f.submit %>
+              <% end %>
+          <% end %>
           </div>
         </div>
       </div>
@@ -44,7 +46,7 @@
         </button>
       </div>
     </div>
-  </header> -->
+  </header>
 
 
 <main role="main">

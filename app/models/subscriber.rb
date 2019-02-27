@@ -15,6 +15,6 @@ class Subscriber < ApplicationRecord
       mailchimp = Mailchimp::API.new("700f335bc25c5e108530e86d769e1510-us20")
       mailchimp.lists.subscribe("2338524647",
                                { email: self.email },
-                               { 'NAME' => self.first_name, 'LANGAGE' => self.langage, 'PAYS' => self.pays })
+                               { 'NAME' => self.name, 'LANGAGE' => self.langage, 'PAYS' => self.pays })
     end 
 end
